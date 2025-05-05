@@ -1,0 +1,53 @@
+# macOS
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+.next/
+out/
+
+# dotenv environment variables
+.env*
+!.env.example
+
+# Vercel
+.vercel/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS / misc
+*.log
+*.swp
+*.swo
+
+# Tailwind JIT cache
+.tailwindcache/
+
+# Typescript cache
+*.tsbuildinfo
+
+# Optional: ignore coverage reports
+coverage/
+
+# Optional: eslint / stylelint / testing output
+.lintcache
+jest-html-reporters-*
+
+# Optional: runtime files
+*.local
+
+# Optional: Next.js telemetry
+.next/telemetry
+
+# Optional: logs from PM2 or similar
+*.pid
