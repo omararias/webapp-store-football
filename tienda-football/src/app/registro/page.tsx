@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function RegistroPage() {
 
@@ -8,6 +9,7 @@ export default function RegistroPage() {
   const [password, setPassword] = useState<string>("");
   const [mensaje, setMensaje] = useState<string | null>(null);
   const [error, setError] = useState<boolean>(false);
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,6 +30,9 @@ export default function RegistroPage() {
         setError(false);
         setEmail("");
         setPassword("");
+        setTimeout(() => {
+          router.push("/login");
+        }, 2000); // Redirige después de 2 segundos
       } else {
         setMensaje(data.message || "Algo salió mal");
         setError(true);
