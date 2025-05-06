@@ -26,10 +26,14 @@ export default function LoginPage() {
   
       if (res.ok) {
         //token
+        const token=data.token;
+        localStorage.setItem("token",token);
 
         
         setMensaje(data.message);
         setError(false);
+        setEmail("");
+        setPassword("");
         router.push("/")
 
         
@@ -70,7 +74,7 @@ export default function LoginPage() {
           
 
         </div>
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200">Iniciar sesión</button>
 
 
         {mensaje && (

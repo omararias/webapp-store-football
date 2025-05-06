@@ -22,6 +22,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/login" className="hover:underline">Login</Link>
             <Link href="/registro" className="hover:underline">Registro</Link>
             <Link href="/admin" className="hover:underline">Admin</Link>
+            <Link href="/micuenta" className="hover:underline">Mi Cuenta</Link>
+            <Link href="/logout"className="hover:underline">Cerrar sesión</Link>
           </nav>
         </header>
 
